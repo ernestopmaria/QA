@@ -15,43 +15,12 @@
         <small>Olá , {{userName}}</small>
         <div class="content">
             
-        <div class="item">
-            <img src="./images/c3po.png" alt="c3po">
-            <span>C3po</span>
+        <div class="item" v-for="person  of characters" :key="person.id">
+            <img :src="person.image" :alt="person.name">
+            <span>{{person.name}}</span>
+            <button style="cursor: pointer;"data-test="like"  @click="like(person.name)">Like</button>
         </div>
-        <div class="item">
-            <img src="./images/chewbacca.png" alt="chewbacca">
-            <span>Chewbacca</span>
-        </div>
-        <div class="item">
-            <img src="./images/hansolo.png" alt="hansolo">
-            <span>Hansolo</span>
-        </div>
-        <div class="item">
-            <img src="./images/leia.png" alt="leia">
-            <span>Leia</span>
-
-        </div>
-        <div class="item">
-            <img src="./images/luke.png" alt="luke">
-            <span>Luke</span>
-
-        </div>
-        <div class="item">
-            <img src="./images/r2d2.png" alt="r2d2">
-            <span>R2d2</span>
-
-        </div>
-        <div class="item">
-            <img src="./images/vader.png" alt="vader">
-            <span>Vader</span>
-
-        </div>
-        <div class="item">
-            <img src="./images/yoda.png" alt="yoda">
-            <span>Yoda</span>
-
-        </div>
+        
     </div>
     </div>
 
